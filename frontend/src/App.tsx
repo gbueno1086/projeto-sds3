@@ -1,6 +1,8 @@
 
 import NavBar from "components/navbar";
 import DataTable from "components/datatable";
+import Chart from "components/barchart";
+import DonutChart from "components/donutchart";
 import Footer from "components/footer";
 
 function App() {
@@ -8,8 +10,21 @@ function App() {
     <>
     <NavBar/>
     <div className="container">
-      <h1 className="text-primary">Content do sistema!</h1>
-      <DataTable />
+      <h1 className="text-primary py-3">Dashboard de Vendas</h1>
+      <div className="row px-3">
+            <div className="col-sm-6">
+                <h5 className="text-center text-secondary">Taxa de Sucesso (%)</h5>
+                <Chart />
+            </div>
+            <div className="col-sm-6">
+            <h5 className="text-center text-secondary">Taxa de Sucesso (%)</h5>
+                <DonutChart />
+            </div>
+      </div>
+      <div className="py-3">
+        <h2 className="text-primary">Todas as vendas</h2>
+        <DataTable />     
+      </div>
     </div>
     <Footer />
     </>
